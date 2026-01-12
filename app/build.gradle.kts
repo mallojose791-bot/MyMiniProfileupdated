@@ -6,9 +6,15 @@ plugins {
 
 android {
     namespace = "com.example.myminiprofile"
-    compileSdk {
-        version = release(36)
+    compileSdk = 36  // Changed from 36
+
+    defaultConfig {
+        applicationId = "com.example.myminiprofile"
+        minSdk = 24
+        targetSdk = 34  // Changed from 36
+        // ... rest of config
     }
+
 
     defaultConfig {
         applicationId = "com.example.myminiprofile"

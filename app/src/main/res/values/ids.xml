@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ivArrowPersonalInfo" type="id" />
+    <item name="headerTitle" type="id" />
+    <item name="recyclerView" type="id" />
+    <item name="fragmentContainer" type="id" />
+    <item name="logoutTitle" type="id" />
+    <item name="nav_chat" type="id" />
+    <item name="nav_apps" type="id" />
+    <item name="txtName" type="id" />
+    <item name="txtAge" type="id" />
+    <item name="txtAddress" type="id" />
+    <item name="txtGender" type="id" />
+    <item name="btnBack" type="id" />
+    <item name="txtSenderName" type="id" />
+    <item name="txtMessageContent" type="id" />
+    <item name="txtMessageTime" type="id" />
+    <item name="txtIcon" type="id" />
+    <item name="txtTimeRange" type="id" />
+    <item name="txtActivity" type="id" />
+    <item name="txtDuration" type="id" />
+    <item name="iconApp" type="id" />
+    <item name="tvTitle" type="id" />
+    <item name="txtTitle" type="id" />
+    <item name="iconArrow" type="id" />
+    <item name="spinnerGender" type="id" />
+    <item name="tvNotificationTitle" type="id" />
+    <item name="tvNotificationMessage" type="id" />
+    <item name="tvNotificationTime" type="id" />
+    <item name="txtAppName" type="id" />
+    <item name="txtMessage" type="id" />
+    <item name="unreadDot" type="id" />
+    <item name="etDob" type="id" />
+    <item name="rgGender" type="id" />
+    <item name="rbMale" type="id" />
+    <item name="rbPreferNot" type="id" />
+    <item name="rbFemale" type="id" />
+    <item name="rbOther" type="id" />
+    <item name="ivArrow" type="id" />
+    <item name="etName" type="id" />
+    <item name="etEmail" type="id" />
+    <item name="etAge" type="id" />
+    <item name="etAddress" type="id" />
+    <item name="btnSave" type="id" />
+</resources>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple_700"
+        android:elevation="4dp"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="?attr/homeAsUpIndicator" />
+
+    <!-- Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Notification Settings Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notification Settings"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Push Notifications -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="@android:color/white"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Push Notifications"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchPushNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+            </LinearLayout>
+
+            <!-- Email Notifications -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="@android:color/white"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Email Notifications"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchEmailNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false" />
+            </LinearLayout>
+
+            <!-- SMS Notifications -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:background="@android:color/white"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SMS Notifications"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchSmsNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false" />
+            </LinearLayout>
+
+            <!-- Notification Categories -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notification Categories"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Messages -->
+            <CheckBox
+                android:id="@+id/checkMessages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Messages"
+                android:textSize="16sp"
+                android:padding="12dp"
+                android:checked="true" />
+
+            <!-- Updates -->
+            <CheckBox
+                android:id="@+id/checkUpdates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="App Updates"
+                android:textSize="16sp"
+                android:padding="12dp"
+                android:checked="true" />
+
+            <!-- Promotions -->
+            <CheckBox
+                android:id="@+id/checkPromotions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Promotions and Offers"
+                android:textSize="16sp"
+                android:padding="12dp"
+                android:checked="false" />
+
+            <!-- Social -->
+            <CheckBox
+                android:id="@+id/checkSocial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Social Activity"
+                android:textSize="16sp"
+                android:padding="12dp"
+                android:checked="true" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

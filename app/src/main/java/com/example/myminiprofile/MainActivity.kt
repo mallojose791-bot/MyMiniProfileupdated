@@ -2,38 +2,51 @@ package com.example.myminiprofile
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.myminiprofile)
+        setContentView(R.layout.myminiprofile)  // ✅ FIXED!
 
-        setupBottomMenu()
-    }
-
-    private fun setupBottomMenu() {
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
 
-        // Load HomeFragment by default
-        openFragment(HomeFragment())
+        // Load default fragment (Profile)
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, ProfileFragment())
+                .commit()
+            bottomNav.selectedItemId = R.id.nav_profile
+        }
 
+        // Handle navigation item clicks
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.nav_baseline_home_24 -> openFragment(HomeFragment())
-                R.id.nav_profile -> openFragment(ChatFragment())
-                R.id.nav_outline_apps_24 -> openFragment(AppsFragment())
-                R.id.nav_baseline_person_24 -> openFragment(ProfileFragment())
+                R.id.nav_home -> {
+                    // TODO: Create and load HomeFragment if needed
+                    true
+                }
+                R.id.nav_chat -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainer, ChatFragment())
+                        .commit()
+                    true
+                }
+                R.id.nav_apps -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainer, AppsFragment())
+                        .commit()
+                    true
+                }
+                R.id.nav_profile -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragmentContainer, ProfileFragment())
+                        .commit()
+                    true
+                }
+                else -> false
             }
-            true // Return true to indicate the click was handled
         }
-    }
-
-    private fun openFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainer, fragment)
-            .commit()
     }
 }

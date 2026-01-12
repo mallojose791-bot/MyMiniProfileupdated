@@ -3,25 +3,47 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:theme="@style/Theme.MyMiniProfile">
+
+        <!-- MainActivity uses NoActionBar -->
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.MyMiniProfile">
+            android:theme="@style/Theme.MyMiniProfile.NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
-</manifest>
+        <!-- All detail activities use DetailActivity theme -->
+        <activity
+            android:name=".PersonalInformationActivity"
+            android:theme="@style/Theme.MyMiniProfile.DetailActivity" />
+
+        <activity
+            android:name=".NotificationsActivity"
+            android:theme="@style/Theme.MyMiniProfile.DetailActivity" />
+
+        <activity
+            android:name=".TimeSpentActivity"
+            android:theme="@style/Theme.MyMiniProfile.DetailActivity" />
+
+        <activity
+            android:name=".FollowingActivity"
+            android:theme="@style/Theme.MyMiniProfile.DetailActivity" />
+
+        <activity
+            android:name=".PrivacyPolicyActivity"
+            android:theme="@style/Theme.MyMiniProfile.DetailActivity" />
+
+        <activity
+            android:name=".TermsConditionActivity"
+            android:theme="@style/Theme.MyMiniProfile.DetailActivity" />
+
+        <activity
+            android:name=".FaqHelpActivity"
+            android:theme="@style/Theme.MyMiniProfile.DetailActivity" />
+
+    </application>
+    </manifest>
